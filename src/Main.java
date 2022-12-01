@@ -6,13 +6,13 @@ public class Main {
         public static void main (String[]args){
 
         System.out.println("try to guess the number!");
-        int range = 100;
-        int number = (int) (Math.random() * range);
-        playlevel1 (range, number);
+        for ( int i=50; i<=150; i +=50 ) playlevel1(i);
+        System.out.println("YOU WIN!!!");
 
         scanner.close();
     }
-        private static void playlevel1 ( int range, int number){
+        private static void playlevel1 (int range){
+            int number = (int) (Math.random() * range);
         while (true) {
             System.out.println("guess the number from 0 to " + range);
             int input_number = scanner.nextInt();
